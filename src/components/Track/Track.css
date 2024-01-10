@@ -16,18 +16,6 @@
     padding: 13px 15px 10px;
 }
 
-
-.playlist {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid black;
-    border-radius: 5px;
-    max-width: 700px;
-    margin: 20px 10px;
-    padding: 10px 15px 5px;
-}
-
 .content {
     display: flex;
     align-items: center;
@@ -56,4 +44,27 @@
 
 .add:hover {
     border: 1px solid #6B39FC;
+}
+
+/* Plalist */
+
+.playlist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    color: #000;
+    border-radius: 5px;
+    max-width: 700px;
+    margin: 20px 10px;
+    padding: 13px 15px 10px;
+}
+
+.remove {
+    background-color: transparent;
+    border: 1.5px solid #6B39FC;
+    border-radius: 20px;
+    color: #6B39FC;
+    padding: 6px 17px;
+    cursor: pointer;
 }

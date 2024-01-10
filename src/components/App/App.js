@@ -3,6 +3,7 @@ import './App.css';
 
 import SearchResults from '../SearchResults/SearchResults';
 import SearchBar from '../SearchBar/SearchBar';
+import Playlist from '../Playlist/Playlist';
 
 const App = () => {
 
@@ -16,6 +17,9 @@ const App = () => {
         <section className='Search'>
             <SearchBar />
             <SearchResults />
+        </section>
+        <section>
+            <Playlist />
         </section>
     </div>
   );
