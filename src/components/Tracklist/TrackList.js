@@ -22,25 +22,25 @@ const tracks = [
       album: '2:55'
     },
     {
-      id: 3,
+      id: 4,
       name: 'Chanson 4',
       artist: 'Artiste 4',
       album: '2:15'
     },
     {
-      id: 3,
+      id: 5,
       name: 'Chanson 5',
       artist: 'Artiste 5',
       album: '2:55'
     },
     {
-      id: 3,
+      id: 6,
       name: 'Chanson 6',
       artist: 'Artiste 6',
       album: '2:55'
     },
     {
-      id: 3,
+      id: 7,
       name: 'Chanson 7',
       artist: 'Artiste 7',
       album: '2:55'

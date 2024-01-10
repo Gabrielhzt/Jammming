@@ -1,10 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App/App.js'; // Remplacez le chemin par le bon chemin
+import { createRoot } from 'react-dom/client';
+import App from '../src/components/App/App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('app')
-);
+const app = createRoot(document.getElementById('app'));
+
+app.render(<App />);

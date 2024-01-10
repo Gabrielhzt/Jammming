@@ -4,8 +4,9 @@ import './SearchBar.css'
 const SearchBar = () => {
 
     return (
-        <div>
+        <div className='bar'>
             <input className="search" placeholder="Enter A Song Title" />
+            <button>Search</button>
         </div>
     )
 }
