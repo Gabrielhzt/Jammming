@@ -1,42 +1,59 @@
-import React, {useState} from 'react';
+import React, { useCallback } from 'react';
 import './Track.css';
 
 const Track = (props) => {
+  console.log('props.track:', props.track);
 
-    if(props.result) {
-        return (
-            <div className='result'>
-                <div className='content'>
-                    <div className='img'>
-                        <img src='https://media.pitchfork.com/photos/64c3bee4a7c2659c4cdcf382/master/pass/Travis%20Scott%20-%20Utopia.jpeg'/>
-                    </div>
-                    <div className='info'>
-                        <h2>{props.name}</h2>
-                        <p>{props.artist}</p>
-                    </div>
-                </div>
-                <button className='add' >Add</button>
-            </div>
-        )
-    }else {
-        return (
-            <div className='playlist'>
-                <div className='content'>
-                    <div className='img'>
-                        <img src='https://media.pitchfork.com/photos/64c3bee4a7c2659c4cdcf382/master/pass/Travis%20Scott%20-%20Utopia.jpeg'/>
-                    </div>
-                    <div className='info'>
-                        <h2>{props.name}</h2>
-                        <p>{props.artist}</p>
-                    </div>
-                </div>
-                <div>
-                    <p>{props.album}</p>
-                </div>
-                <button className='remove' >Remove</button>
-            </div>
-        )
-    }
-}
+  function passTrack() {
+    props.onAdd(props.track);
+  }
+
+  function passTrackToRemove() {
+    props.onRemove(props.track);
+  }
+
+  const albumImage = (props.track.album && props.track.album.images && props.track.album.images.length > 0)
+  ? props.track.album.images[0].url
+  : 'default_image_url';
+
+  if (props.result) {
+    return (
+      <div className='result'>
+        <div className='content'>
+          <div className='img'>
+            {props.track.images && props.track.images.length > 0 && (
+              <img src={props.track.images[0].url} alt="Track" />
+            )}
+          </div>
+          <div className='info'>
+            <h2>{props.track.name}</h2>
+            <p>{props.track.artist}</p>
+          </div>
+        </div>
+        <button className='add' onClick={passTrack}>Add</button>
+      </div>
+    );
+  } else {
+    return (
+      <div className='playlist'>
+        <div className='content'>
+          <div className='img'>
+            {props.track.images && props.track.images.length > 0 && (
+              <img src={props.track.images[0].url} alt="Track" />
+            )}
+          </div>
+          <div className='info'>
+            <h2>{props.track.name}</h2>
+            <p>{props.track.artist}</p>
+          </div>
+        </div>
+        <div>
+          <p>{props.track.album}</p>
+        </div>
+        <button className='remove' onClick={passTrackToRemove}>Remove</button>
+      </div>
+    );
+  }
+};
 
 export default Track;

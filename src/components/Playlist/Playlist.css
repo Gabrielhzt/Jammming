@@ -16,11 +16,10 @@
     margin-bottom: 40px;
 }
 
-.image {
+.image img {
     width: 260px;
     height: 250px;
     border-radius: 10px;
-    background-color: aliceblue;
 }
 
 .info-playlist {
