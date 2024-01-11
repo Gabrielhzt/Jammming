@@ -27,6 +27,14 @@
     gap: 5px;
 }
 
+.info h2 {
+    font-size: 16px;
+}
+
+.info p {
+    font-size: 15px;
+}
+
 .img img {
     width: 50px;
     border-radius: 5px;
