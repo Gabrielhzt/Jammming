@@ -1,31 +1,85 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import './Playlist.css';
 import TrackList from '../Tracklist/TrackList'
 
-const Playlist = () => {
-
+const Playlist = (props) => {
     const result = false
+
+    const [isEditing, setIsEditing] = useState(false);
+    const [newTitle, setNewTitle] = useState("My Playlist");
+    const [saveMessage, setSaveMessage] = useState("");
+
+    const handleNameChange = useCallback(
+        (event) => {
+          setNewTitle(event.target.value);
+        },
+        []
+    );
+
+    const handleEdit = () => {
+        setIsEditing(true);
+    };
+
+    const handleSave = () => {
+      
+        props.onNameChange(newTitle);
+      
+        setIsEditing(false);
+    };
+
+    const handleSaveToSpotify = async () => {
+        try {
+          const playlistData = {
+            name: newTitle,
+            tracks: props.playlistTracks.map((track) => track.uri),
+          };
+      
+    
+          await props.onSaveToSpotify(playlistData);
+      
+          console.log("Playlist saved successfully");
+          setSaveMessage("Playlist saved successfully!");
+      
+          props.onNameChange("New Playlist");
+          props.onTracksChange([]);
+      
+          setIsEditing(false);
+        } catch (error) {
+          console.error("Error saving playlist to Spotify:", error);
+          setSaveMessage("Error saving playlist. Please try again.");
+          setIsEditing(false);
+        }
+    };
+    
 
     return (
         <div className='all'>
             <div className='infos'>
                 <div className='image'>
-                    <img/>
+                <img src={process.env.PUBLIC_URL + '/favicon.ico'} alt="Favicon" />
                 </div>
                 <div className='info-playlist'>
                     <p>Playlist</p>
-                    <h1>My Playlist #1</h1>
+                    {isEditing ? (
+                      <input onChange={handleNameChange} value={newTitle} />
+                    ) : (
+                      <h1>{newTitle}</h1>
+                    )}
                     <p>Gab</p>
                 </div>
             </div>
 
             <div className='link'>
-                <p>Modify Your Playlist</p>
-                <button>Save to Spotify</button>
+                {isEditing ? (
+                    <p onClick={handleSave}>Save your modifications</p>
+                ) : (
+                    <p onClick={handleEdit}>Modify Your Playlist</p>
+                )}
+                <button onClick={props.onSave} >Save to Spotify</button>
             </div>
 
             <div className='musics'>
-              <TrackList result={result} />
+              <TrackList result={result} userSearchResults={props.playlistTracks} onRemove={props.onRemove} />
             </div>
         </div>
     )
