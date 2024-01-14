@@ -62,3 +62,80 @@ body {
     grid-area: Playlist;
     border-radius: 10px;
 }
+
+
+@media only screen and (max-width: 375px) {
+    
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'Title'
+        'Search'
+        'Playlist'
+    ;
+    }
+
+    .Title {
+        padding: 20px;
+        max-width: 295px;
+    }
+    
+    .Title h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .desc {
+        font-size: 10px;
+    }
+
+    .Title h2 {
+      font-size: 20px;
+    }
+
+    .Search {
+        max-width: 295px;
+    }
+
+    .Playlist {
+        max-width: 335px;
+    }
+    
+}
+
+@media only screen and (max-width: 425px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'Title'
+        'Search'
+        'Playlist'
+    ;
+    }
+
+    .Title {
+        padding: 20px;
+        max-width: 310px;
+    }
+    
+    .Title h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .desc {
+        font-size: 10px;
+    }
+
+    .Title h2 {
+      font-size: 20px;
+    }
+
+    .Search {
+        max-width: 310px;
+    }
+
+    .Playlist {
+        max-width: 350px;
+    }
+}

@@ -42,6 +42,7 @@
 .link p {
     text-decoration: underline;
     font-size: 20px;
+    cursor: pointer;
 }
 
 button {
@@ -58,4 +59,139 @@ button {
     padding-top: 35px;
     height: 230px;
     overflow-y: auto;
+}
+
+.musics-a {
+    border-top: 1px solid #fff;
+}
+
+.nothing-b {
+    text-align: center;
+    
+    padding: 20px 0 0;
+    margin: 20px;
+    color: #bbbbbb;
+}
+
+@media only screen and (max-width: 375px) {
+
+    .all {
+        padding: 20px 20px 20px;
+        border-radius: 10px;
+    }
+
+    .infos {
+        margin-bottom: 15px;
+    }
+
+    .image img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .info-playlist {
+        gap: 5px;
+    }
+
+    .info-playlist h1 {
+        font-size: 25px;
+    }
+
+    .info-playlist p {
+        font-size: 12px;
+    }
+
+    .change {
+        width: 150px;
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .link p {
+        text-decoration: underline;
+        font-size: 13px;
+    }
+
+    .link button {
+        background-color: #6B39FC;
+        border: 1px solid #161616;
+        border-radius: 20px;
+        padding: 7px 10px;
+        font-size: 13px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .musics {
+        border-top: 1px solid #fff;
+        padding-top: 15px;
+        height: 130px;
+        overflow-y: auto;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .all {
+        padding: 20px 20px 20px;
+        border-radius: 10px;
+    }
+
+    .infos {
+        margin-bottom: 15px;
+    }
+
+    .image img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .info-playlist {
+        gap: 5px;
+    }
+
+    .info-playlist h1 {
+        font-size: 25px;
+    }
+
+    .info-playlist p {
+        font-size: 12px;
+    }
+
+    .change {
+        width: 150px;
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .link p {
+        text-decoration: underline;
+        font-size: 13px;
+    }
+
+    button {
+        background-color: #6B39FC;
+        border: 1px solid #161616;
+        border-radius: 20px;
+        padding: 7px 10px;
+        font-size: 13px;
+        color: #fff;
+    }
+
+    .musics {
+        border-top: 1px solid #fff;
+        padding-top: 15px;
+        height: 130px;
+        overflow-y: auto;
+    }
 }

@@ -22,3 +22,45 @@
     margin: 15px 10px;
     padding: 10px 15px;
 }
+
+@media only screen and (max-width: 375px) {
+
+    .bar {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .bar button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+
+    .search {
+        font-size: 15px;
+        padding: 10px 10px;
+        margin: 0 ;
+        min-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .bar {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .bar button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+
+    .search {
+        font-size: 15px;
+        padding: 10px 10px;
+        margin: 0 ;
+        min-width: 218px;
+    }
+}

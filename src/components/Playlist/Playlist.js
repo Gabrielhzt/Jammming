@@ -61,7 +61,7 @@ const Playlist = (props) => {
                 <div className='info-playlist'>
                     <p>Playlist</p>
                     {isEditing ? (
-                      <input onChange={handleNameChange} value={newTitle} />
+                      <input className='change' onChange={handleNameChange} value={newTitle} />
                     ) : (
                       <h1>{newTitle}</h1>
                     )}
@@ -78,8 +78,14 @@ const Playlist = (props) => {
                 <button onClick={props.onSave} >Save to Spotify</button>
             </div>
 
-            <div className='musics'>
-              <TrackList result={result} userSearchResults={props.playlistTracks} onRemove={props.onRemove} />
+            <div className='musics-a'>
+            {props.playlistTracks.length > 0 ? (
+                <div className='musics'>
+                     <TrackList result={result} userSearchResults={props.playlistTracks} onRemove={props.onRemove} />
+                </div>
+            ) : (
+              <p className='nothing-b'>Your playlist is empty.</p>
+            )}
             </div>
         </div>
     )

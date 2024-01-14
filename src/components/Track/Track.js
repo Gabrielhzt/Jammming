@@ -47,7 +47,7 @@ const Track = (props) => {
             <p>{props.track.artist}</p>
           </div>
         </div>
-        <div>
+        <div className='album'>
           <p>{props.track.album}</p>
         </div>
         <button className='remove' onClick={passTrackToRemove}>Remove</button>

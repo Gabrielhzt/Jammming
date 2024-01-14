@@ -5,3 +5,27 @@
     height: 350px;
     overflow-y: auto;
 }
+
+.nothing {
+    text-align: center;
+    margin: 20px;
+    color: #bbbbbb;
+}
+
+@media only screen and (max-width: 375px) {
+    .list {
+        width: 300px;
+        max-width: 295px;
+        height: 130px;
+        overflow-y: auto;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .list {
+        width: 310px;
+        max-width: 330px;
+        height: 130px;
+        overflow-y: auto;
+    }
+}

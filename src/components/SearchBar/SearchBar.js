@@ -6,7 +6,9 @@ const SearchBar = (props) => {
     const [term, setTerm] = useState("");
 
   function passTerm() {
-    props.onSearch(term);
+    if (term.trim() !== "") {
+        props.onSearch(term);
+    }
   }
 
   function handleTermChange({ target }) {
