@@ -195,3 +195,13 @@ button {
         overflow-y: auto;
     }
 }
+
+@media only screen and (max-width: 1020px) {
+
+    .image img {
+        width: 200px;
+        height: 200px;
+    }
+
+
+}

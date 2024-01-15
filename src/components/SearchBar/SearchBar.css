@@ -40,7 +40,7 @@
         font-size: 15px;
         padding: 10px 10px;
         margin: 0 ;
-        min-width: 200px;
+        min-width: 180px;
     }
 }
 
@@ -61,6 +61,28 @@
         font-size: 15px;
         padding: 10px 10px;
         margin: 0 ;
-        min-width: 218px;
+        min-width: 228px;
     }
+}
+
+@media only screen and (max-width: 1020px) {
+
+    .bar {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .bar button {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+
+    .search {
+        font-size: 18px;
+        padding: 10px 10px;
+        margin: 0 ;
+        min-width: 600px;
+    }
+
 }

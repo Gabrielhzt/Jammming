@@ -58,7 +58,8 @@ const App = () => {
   } 
 
   return (
-    <div className='grid'>
+    <div className='grid-b'>
+      <div className='grid'>
         <section className='Title'>
             <h1>Jammming <span className='desc'>Powered by Spotify</span></h1>
             <h2>Let's find something for your playlist</h2>
@@ -77,6 +78,7 @@ const App = () => {
               onSave={savePlaylist}
             />
         </section>
+        </div>
     </div>
   );
 };

@@ -126,3 +126,28 @@
     }
 
 }
+
+@media only screen and (max-width: 1020px) {
+
+    .result {
+        padding: 10px 15px 7px;
+        margin: 20px 0px;
+    }
+
+    .img img {
+        width: 40px;
+        border-radius: 5px;
+    }
+
+    .info h2 {
+        font-size: 15px;
+    }
+    
+    .info p {
+        font-size: 13px;
+    }
+
+    .album {
+        display: none;
+    }
+}
