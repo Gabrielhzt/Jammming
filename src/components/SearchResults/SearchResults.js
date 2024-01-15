@@ -4,18 +4,6 @@ import TrackList from '../Tracklist/TrackList';
 import Spotify from '../../util/Spotify';
 
 const SearchResults = (props) => {
-  const [term, setTerm] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
-
-  const searchSpotify = (term) => {
-    Spotify.search(term)
-      .then((results) => {
-        setSearchResults(results);
-      })
-      .catch((error) => {
-        console.error('Error searching Spotify:', error);
-      });
-  };
 
   const result = true;
 

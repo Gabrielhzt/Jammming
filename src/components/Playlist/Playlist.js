@@ -7,7 +7,6 @@ const Playlist = (props) => {
 
     const [isEditing, setIsEditing] = useState(false);
     const [newTitle, setNewTitle] = useState("My Playlist");
-    const [saveMessage, setSaveMessage] = useState("");
 
     const handleNameChange = useCallback(
         (event) => {
@@ -27,29 +26,7 @@ const Playlist = (props) => {
         setIsEditing(false);
     };
 
-    const handleSaveToSpotify = async () => {
-        try {
-          const playlistData = {
-            name: newTitle,
-            tracks: props.playlistTracks.map((track) => track.uri),
-          };
-      
     
-          await props.onSaveToSpotify(playlistData);
-      
-          console.log("Playlist saved successfully");
-          setSaveMessage("Playlist saved successfully!");
-      
-          props.onNameChange("New Playlist");
-          props.onTracksChange([]);
-      
-          setIsEditing(false);
-        } catch (error) {
-          console.error("Error saving playlist to Spotify:", error);
-          setSaveMessage("Error saving playlist. Please try again.");
-          setIsEditing(false);
-        }
-    };
     
 
     return (
