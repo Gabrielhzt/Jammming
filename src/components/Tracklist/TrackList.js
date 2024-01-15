@@ -4,7 +4,6 @@ import Track from '../Track/Track';
 
 
 const TrackList = (props) => {
-  const tracks = props.tracks || []; 
 
     return (
       <div className="track-list">

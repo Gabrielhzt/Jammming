@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import './Track.css';
 
 const Track = (props) => {
@@ -11,10 +11,6 @@ const Track = (props) => {
   function passTrackToRemove() {
     props.onRemove(props.track);
   }
-
-  const albumImage = (props.track.album && props.track.album.images && props.track.album.images.length > 0)
-  ? props.track.album.images[0].url
-  : 'default_image_url';
 
   if (props.result) {
     return (

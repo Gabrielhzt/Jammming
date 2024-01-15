@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SearchResults.css';
 import TrackList from '../Tracklist/TrackList';
-import Spotify from '../../util/Spotify';
 
 const SearchResults = (props) => {
 
