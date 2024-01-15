@@ -64,7 +64,12 @@ body {
 }
 
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 400px) {
+
+    .grid-b {
+        display: flex;
+        justify-content: center;
+    }
     
     .grid {
         grid-template-columns: 1fr;
@@ -77,11 +82,11 @@ body {
 
     .Title {
         padding: 20px;
-        max-width: 25px;
+        max-width: 290px;
     }
     
     .Title h1 {
-        font-size: 30px;
+        font-size: 25px;
         margin-bottom: 20px;
     }
 
@@ -94,16 +99,16 @@ body {
     }
 
     .Search {
-        max-width: 285px;
+        max-width: 290px;
     }
 
     .Playlist {
-        max-width: 35px;
+        max-width: 370px;
     }
     
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 440px) and (min-width: 400px) {
 
     .grid-b {
         display: flex;
@@ -120,7 +125,7 @@ body {
 
     .Title {
         padding: 20px;
-        max-width: 325px;
+        max-width: 450px;
     }
     
     .Title h1 {
@@ -137,16 +142,16 @@ body {
     }
 
     .Search {
-        max-width: 325px;
+        max-width: 380px;
     }
 
     .Playlist {
-        max-width: 370px;
+        max-width: 500px;
     }
 }
 
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1020px) and (min-width: 440px) {
 
     .grid-b {
         display: flex;

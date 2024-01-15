@@ -23,7 +23,7 @@
     padding: 10px 15px;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 400px) {
 
     .bar {
         gap: 10px;
@@ -40,11 +40,11 @@
         font-size: 15px;
         padding: 10px 10px;
         margin: 0 ;
-        min-width: 180px;
+        min-width: 195px;
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 440px) and (min-width: 400px) {
 
     .bar {
         gap: 10px;
@@ -61,11 +61,11 @@
         font-size: 15px;
         padding: 10px 10px;
         margin: 0 ;
-        min-width: 228px;
+        min-width: 255px;
     }
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1020px) and (min-width: 440px) {
 
     .bar {
         gap: 10px;

@@ -73,7 +73,7 @@ button {
     color: #bbbbbb;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 380px) {
 
     .all {
         padding: 20px 20px 20px;
@@ -135,7 +135,7 @@ button {
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 440px) and (min-width: 380px) {
 
     .all {
         padding: 20px 20px 20px;
@@ -196,7 +196,7 @@ button {
     }
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1020px) and (min-width: 440px) {
 
     .image img {
         width: 200px;

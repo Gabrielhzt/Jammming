@@ -88,7 +88,7 @@
     }
 
     .info h2 {
-        font-size: 15px;
+        font-size: 12px;
     }
     
     .info p {
@@ -99,9 +99,21 @@
         display: none;
     }
 
+    .add {
+        font-size: 15px;
+        padding: 6px 12px;
+        cursor: pointer;
+    }
+
+    .remove {
+        font-size: 15px;
+        padding: 6px 10px;
+        cursor: pointer;
+    }
+
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 425px) and (min-width: 380px) {
 
     .result {
         padding: 10px 15px 7px;
@@ -127,7 +139,7 @@
 
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1020px) and (min-width: 425px) {
 
     .result {
         padding: 10px 15px 7px;

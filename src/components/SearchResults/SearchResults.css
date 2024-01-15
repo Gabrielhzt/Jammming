@@ -12,27 +12,27 @@
     color: #bbbbbb;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 400px) {
     .list {
         width: 300px;
-        max-width: 295px;
+        max-width: 286px;
         height: 130px;
         overflow-y: auto;
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (min-width: 400px) and (max-width: 440px) {
     .list {
-        width: 320px;
-        max-width: 330px;
+        width: 350px;
+        max-width: 1000px;
         height: 130px;
         overflow-y: auto;
     }
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1020px) and (min-width: 440px) {
     .list {
-        width: 707px;
+        width: 710px;
         max-width: 800px;
         height: 180px;
         overflow-y: auto;
